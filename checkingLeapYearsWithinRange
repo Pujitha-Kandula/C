@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+    int startYear,endYear,count=0;
+    printf("Enter the start year and end year: ");
+    scanf("%d %d",&startYear,&endYear);
+    printf("The leap years are\n");
+    for(int i=startYear;i<=endYear;i++)
+    {
+         if((i%4==0) && (i%100!=0) || (i%400==0))
+         {
+             count++;
+             printf("%d\n",i);
+         }
+    }
+    printf("The number of leap years within range is %d",count);
+    return 0;
+}
