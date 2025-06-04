@@ -5,6 +5,6 @@ int main()
     char a[100];
     printf("Enter a character: ");
     scanf("%s",a);
-    printf("The integer entered by the user is %s",a);
+    printf("The word entered by the user is %s",a);
     return 0;
 }
