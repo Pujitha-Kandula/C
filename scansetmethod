@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main()
+{
+    char a[100];
+    printf("Enter a sentence: ");
+    scanf("%[^\n]s",a);
+    printf("The sentence entered by the user is %s",a);
+    return 0;
+}
