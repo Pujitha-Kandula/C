@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b,temp;
+    printf("Enter a and b values: ");
+    scanf("%d %d",&a,&b);
+    printf("\nBefore swapping the a and b values are %d and %d",a,b);
+    a=a^b;
+    b=a^b;
+    a=a^b;
+    printf("\nAfter swapping the a and b values are %d and %d",a,b);
+    return 0;
+}
