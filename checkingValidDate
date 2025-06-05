@@ -1,0 +1,40 @@
+#include <stdio.h>
+int isLeapYear(int year)
+{
+    if((year%4==0)&&(year%100!=0)||(year%400==0))
+    {
+        return 1;
+    }
+    return 0;
+}
+int isValidDate(int day,int month,int year)
+{
+    if(year<1 || year>9999)
+    {
+        return 0;
+    }
+    if(month<1 || month>12)
+    {
+        return 0;
+    }
+    int daysInMonth[]={0,31,28,31,30,31,30,31,31,30,31,30,31};
+    if(isLeapYear(year)&month==2)
+        daysInMonth[2]=29;
+    if(day<1||day>daysInMonth[month])
+        return 0;
+    return 1;
+}
+int main()
+{
+    int year,month,day;
+    printf("Enter a year,month,date: ");
+    scanf("%d %d %d",&year,&month,&day);
+    if(isValidDate(day,month,year))
+    {
+        printf("It's a valid date");
+    }
+    else
+    {
+        printf("It's a invalid date");
+    }
+}
