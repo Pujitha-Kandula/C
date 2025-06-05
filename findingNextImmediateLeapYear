@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    int year,temp;
+    printf("Enter a year: ");
+    scanf("%d",&year);
+    if(year%4==0 || year%100!=0 && year%400==0)
+    {
+        temp=year;
+        temp=temp+4;
+        printf("The next immediate year is %d",temp);
+        return 0;
+    }
+}
