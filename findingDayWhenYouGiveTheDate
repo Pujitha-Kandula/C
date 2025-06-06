@@ -1,0 +1,23 @@
+import java.util.*;
+import java.time.LocalDate;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the date[day,month,year]: ");
+		int day=sc.nextInt();
+		int month=sc.nextInt();
+		int year=sc.nextInt();
+		try
+		{
+		    LocalDate date=LocalDate.of(year,month,day);
+		    String daysOfWeek=date.getDayOfWeek().toString();
+		    daysOfWeek=daysOfWeek.substring(0,1).toUpperCase() + daysOfWeek.substring(1).toLowerCase();
+		    System.out.println("The day is "+daysOfWeek);
+		}
+		catch(Exception e)
+		{
+		    System.out.println("Invalid date");
+		}
+	}
+}
